@@ -1,8 +1,8 @@
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 import math
 
-background = Image.new(mode="RGBA", size=(940, 788), color=(255, 192, 203, 255))  # Pink background
-background = background.filter(ImageFilter.GaussianBlur(radius=10))  # Blur the background
+background = Image.new(mode="RGBA", size=(940, 788), color=(255, 192, 203, 255))  
+background = background.filter(ImageFilter.GaussianBlur(radius=10))  
 
 trophy = Image.new(mode="RGBA", size=(940, 788), color=(255, 192, 203, 255))  
 draw = ImageDraw.Draw(trophy)
@@ -75,4 +75,5 @@ draw.multiline_text(((940 - bw) / 2, 660), text_bottom, fill="white", font=body_
 final_image = Image.alpha_composite(background, trophy)
 
 trophy.save("CSELEC3_3B_TorreonAngelFaith_Activity1.png")
+
 trophy.show()
